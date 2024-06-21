@@ -2,14 +2,3 @@
     display: none;  
     
    }
-   .mobile-v{
-    display: none;
-    margin-left: 35px;
-   }
-
-   @media screen and (max-width:460px) {
-    .mobile-v{
-        display: block;
-        margin-left: 35px;
-       }
-}

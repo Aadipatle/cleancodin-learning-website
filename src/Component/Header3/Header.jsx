@@ -3,6 +3,8 @@ import Css from "./Header.module.css"
 import { Link } from 'react-router-dom'
 import logo from "../../Assets/Instagram post - 1 (8).svg"
 import { useState, useRef } from 'react'
+import { FaBars } from 'react-icons/fa'
+import { HashLink } from 'react-router-hash-link'
 // import bars from '../../Assets/Bars.png'
 
 
@@ -54,7 +56,7 @@ function Header() {
     return (
         <>
 
-            <div className={Css.topHeader}>
+            <div className={Css.topHeader} id='top'>
 
 
             </div>
@@ -63,10 +65,10 @@ function Header() {
                     <img src={logo} alt='main-logo' />
                 </div>
                 <div className={Css.nav}>
-                    <Link to={"/"}><span>Home</span></Link>
+                    <HashLink to={"/#top"}><span>Home</span></HashLink>
                     <Link to={"/page"}><span>About </span></Link>
-                    <Link to={"/services"}><span>Services </span></Link>
-                    <Link to={"/contactus"}><span> Contact us</span></Link>
+                    <HashLink to={"/#course-sec"}><span>Courses </span></HashLink>
+                    <Link to={"/contactus"}><span> Contact</span></Link>
                     <div className={Css.talkbtn}>
                         <button>
                             Let's Talk
@@ -74,15 +76,16 @@ function Header() {
                     </div>
                 </div>
 
-                <div onClick={open} className={Css.hiddenNavBar}><img src='/' className={Css.bars}></img></div>
+                <div onClick={open} className={Css.hiddenNavBar}><span className={Css.bars}><FaBars />
+                </span></div>
 
                 <div className={Css.hiddenNav} ref={ref2}>
                     <div className={Css.hiddenNavCase} ref={ref1}>
-                        <div className={Css.hiddenNav_cross} onClick={cross} ><img width="40" height="40" src="/" alt="delete-sign--v1" /></div>
-                        <Link to={"/"} onClick={cross}><span>Home</span></Link>
+                        <div className={Css.hiddenNav_cross} onClick={cross} ></div>
+                        <HashLink to={"/#top"} onClick={cross}><span>Home</span></HashLink>
                         <Link to={"/page"} onClick={cross}><span> About</span></Link>
-                        <Link to={"/services"} onClick={cross}><span>Services </span></Link>
-                        <Link to={"/contactus"} onClick={cross}><span> Contact us</span></Link>
+                        <HashLink to={"/course-sec"} onClick={cross}><span>Services </span></HashLink>
+                        <Link to={"/contactus"} onClick={cross}><span> Contact</span></Link>
                         <button className={Css.hidenbtn}>Let's Talk</button>
                     </div>
                 </div>

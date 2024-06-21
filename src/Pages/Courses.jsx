@@ -1,17 +1,6 @@
-import React from "react";
-// import image from "../../Assets/Group 46.jpg";
-// import Dj from "../../Assets/dj inhouse.jpg";
-// import Decor from "../../Assets/decoration.jpg";
-// import Cater from "../../Assets/cateringin.jpeg";
-// import dress from "../../Assets/dressing room.jpeg";
-// import parking from "../../Assets/car parking.jpg";
-// import valet from "../../Assets/Component 12.jpg";
-// import guest from "../../Assets/guest.jpg";
-// import stage from "../../Assets/stage.jpeg";
-// import "../Pages/main/Main.module.css";
+import React, { useEffect, useState } from "react";
 import Css from '../Pages/main/Main.module.css'
-import  './Courses.css'
-import { RiVerifiedBadgeFill } from "react-icons/ri";
+// import  './Courses.css'
 import { FaRegStar, FaRupeeSign, FaStar } from "react-icons/fa";
 import web from '../Assets/DigiB.png'
 
@@ -20,12 +9,63 @@ import { EffectCoverflow, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import ReactStars from "react-rating-stars-component";
+import Detail from "../Component/detail/Detail";
 function PgService() {
+    const [open, setOpen] = useState(false)
+    function courseDetails(e) {
+        setOpen(!open)
+        console.log(e)
+    }
+    let courses = [
+        {
+            coursename: 'Mobile App Development',
+            price: 32000,
+            time: 6,
+            description: 'Mobile application development is the process of creating software applications that run on a mobile device',
+            ratings: 3,
+            effect: 1000,
+            image: '/Assets/DigiB.png',
+        },
+        {
+            coursename: 'Full-Stack Development',
+            price: 30000,
+            time: 6,
+            ratings: 4,
+            image: '/Assets/soft.png',
+            effect: 1500,
+            description: 'Full stack development is the process of developing both the frontend and backend of applications'
+        },
+        {
+            coursename: 'Front End Development',
+            price: 15000,
+            time: 3,
+            ratings: 4.5,
+            image: '/Assets/logo1.png',
+            effect: 2000,
+            description: 'Front-end development is the process of building components that interact with users. Examples are the user interface, buttons, user-entered data, websites, and user experience (UX) features.'
+        },
+        {
+            coursename: 'Back End Development',
+            price: 20000,
+            time: 3,
+            ratings: 3.5,
+            image: '/Assets/soft.png',
+            effect: 2500,
+            description: 'Back-end development means working on server-side software, which focuses on everything you cant see on a website'
+        },
+    ]
+    useEffect(() => {
+        AOS.init({
+
+        });
+    }, [])
     return (
         <>
 
-            <div className="mobile-v">
+            <div className={Css.mobile}>
                 <Swiper
                     effect={"coverflow"}
                     grabCursor={true}
@@ -38,130 +78,41 @@ function PgService() {
                         modifier: 1,
                         slideShadows: true,
                     }}
-                    // autoplay={{
-                    //     delay: 2000,
-                    //     disableOnInteraction: false,
-                    // }}
+                    autoplay={{
+                        delay: 2000,
+                        disableOnInteraction: false,
+                    }}
 
                     modules={[EffectCoverflow, Autoplay]}
-                    className='swip_wrap'
+                    className={Css.swip_wrap}
                 >
-                    <SwiperSlide className={Css.swipe_slide} >
-                        <div className={Css.course}>
-                            <div className={Css.logos}>
-                                <img src={web} alt="front-end" />
-                            </div>
-                            <div className={Css.details}>
-                                <h5>
-                                    <span className={Css.star}><FaStar /></span>
-                                    <span className={Css.star}><FaStar /></span>
-                                    <span className={Css.star}><FaStar /></span>
-                                    <span className={Css.star}><FaStar /></span>
-                                    <span className={Css.star}><FaRegStar /></span>
-                                    <span className={Css.star1}>4.0 Rating</span>
-                                </h5>
-                                <h5>Mobile App Development</h5>
-                                <h5>Price <span><FaRupeeSign size={'11px'} /></span>32000</h5>
-                                <h5>Duration 4 Months</h5>
-                                <div className={Css.enroll}>
-                                    <button>Enroll Now</button>
+                    {
+                        courses.map((e) => (
+                            <SwiperSlide className={Css.swiper_slide} key={e.coursename} >
+                                <div className={Css.c}>
+                                    <div className={Css.course} data-aos="fade-up" data-aos-duration={e.effect}>
+                                        <div className={Css.logos}>
+                                            <img src={e.image} alt="front-end" />
+                                        </div>
+                                        <div className={Css.details}>
+                                            <h5>
+                                                <span className={Css.rating}><ReactStars count={e.ratings} color="#ffd700"/> {e.ratings} Rating</span>
+                                            </h5>
+                                            <h5>{e.coursename}</h5>
+                                            <h5>Duration {e.time} Months</h5>
+                                            <div className={Css.enroll}>
+                                                <button onClick={() => { courseDetails(`${e.coursename}`) }}>Enroll Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    
-                    <SwiperSlide className={Css.swipe_slide} >
-                        <div className={Css.course}>
-                            <div className={Css.logos}>
-                                <img src={web} alt="front-end" />
-                            </div>
-                            <div className={Css.details}>
-                                <h5>
-                                    <span className={Css.star}><FaStar /></span>
-                                    <span className={Css.star}><FaStar /></span>
-                                    <span className={Css.star}><FaStar /></span>
-                                    <span className={Css.star}><FaStar /></span>
-                                    <span className={Css.star}><FaRegStar /></span>
-                                    <span className={Css.star1}>4.0 Rating</span>
-                                </h5>
-                                <h5>Mobile App Development</h5>
-                                <h5>Price <span><FaRupeeSign size={'11px'} /></span>32000</h5>
-                                <h5>Duration 4 Months</h5>
-                                <div className={Css.enroll}>
-                                    <button>Enroll Now</button>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className={Css.swipe_slide}  >
-                        <div className={Css.course}>
-                            <div className={Css.logos}>
-                                <img src={web} alt="front-end" />
-                            </div>
-                            <div className={Css.details}>
-                                <h5>
-                                    <span className={Css.star}><FaStar /></span>
-                                    <span className={Css.star}><FaStar /></span>
-                                    <span className={Css.star}><FaStar /></span>
-                                    <span className={Css.star}><FaStar /></span>
-                                    <span className={Css.star}><FaRegStar /></span>
-                                    <span className={Css.star1}>4.0 Rating</span>
-                                </h5>
-                                <h5>Mobile App Development</h5>
-                                <h5>Price <span><FaRupeeSign size={'11px'} /></span>32000</h5>
-                                <h5>Duration 4 Months</h5>
-                                <div className={Css.enroll}>
-                                    <button>Enroll Now</button>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className={Css.swipe_slide}  >
-                        <div className={Css.course}>
-                            <div className={Css.logos}>
-                                <img src={web} alt="front-end" />
-                            </div>
-                            <div className={Css.details}>
-                                <h5>
-                                    <span className={Css.star}><FaStar /></span>
-                                    <span className={Css.star}><FaStar /></span>
-                                    <span className={Css.star}><FaStar /></span>
-                                    <span className={Css.star}><FaStar /></span>
-                                    <span className={Css.star}><FaRegStar /></span>
-                                    <span className={Css.star1}>4.0 Rating</span>
-                                </h5>
-                                <h5>Mobile App Development</h5>
-                                <h5>Price <span><FaRupeeSign size={'11px'} /></span>32000</h5>
-                                <h5>Duration 4 Months</h5>
-                                <div className={Css.enroll}>
-                                    <button>Enroll Now</button>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className={Css.swipe_slide} >
-                        <div className={Css.course}>
-                            <div className={Css.logos}>
-                                <img src={web} alt="front-end" />
-                            </div>
-                            <div className={Css.details}>
-                                <h5>
-                                    <span className={Css.star}><FaStar /></span>
-                                    <span className={Css.star}><FaStar /></span>
-                                    <span className={Css.star}><FaStar /></span>
-                                    <span className={Css.star}><FaStar /></span>
-                                    <span className={Css.star}><FaRegStar /></span>
-                                    <span className={Css.star1}>4.0 Rating</span>
-                                </h5>
-                                <h5>Mobile App Development</h5>
-                                <h5>Price <span><FaRupeeSign size={'11px'} /></span>32000</h5>
-                                <h5>Duration 4 Months</h5>
-                                <div className={Css.enroll}>
-                                    <button>Enroll Now</button>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
+                            </SwiperSlide>
+
+                        ))
+                    }   
+                    {
+                        open ? <h1>Hello</h1> : ''
+                    }      
                 </Swiper>
             </div>
 

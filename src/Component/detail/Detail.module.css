@@ -1,0 +1,7 @@
+.detailpage{
+    height: 350px;
+    background-color: gainsboro;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+}

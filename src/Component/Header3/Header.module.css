@@ -131,9 +131,8 @@
   width: 100dvw;
   background-color: #191919;
   display: none;
+  font-family: Ubuntu;
   flex-direction: column;
-  /* justify-content: center;
-    align-items: center; */
   gap: 20px;
   position: relative;
   padding: 20px;
@@ -185,7 +184,7 @@
   border-radius: 56px;
   color: #ffffff;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 @media screen and (480px < width < 768px) {
@@ -247,10 +246,24 @@
     border-radius: 10px;
   }
 }
+ @media (min-width: 768px) and (max-width: 1024px){
+  .nav {
+    display: block;
+    display: flex;
+    gap: 10px;
+  } 
+   
+
+  
+
+}
 @media screen and (max-width: 480px) {
   .bars {
     height: 40px;
     width: 40px;
+  }
+  .header .logo{
+    width: 60%;
   }
 
   .header {
@@ -268,7 +281,7 @@
   .hiddenNavCase {
     height: 100dvh;
     width: 100dvw;
-    background-color: #191919;
+    background-color: #212121eb;
     display: flex;
     flex-direction: column;
     /* justify-content: center;
@@ -285,9 +298,12 @@
   }
 
   .hiddenNavBar {
-    height: 100%;
+    /* height: 100%; */
     width: 100px;
     display: flex;
+    font-size: 30px;
+  color: #FDB700;
+
     justify-content: center;
     align-items: center;
   }
