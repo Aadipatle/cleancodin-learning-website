@@ -1,0 +1,140 @@
+.technology_wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+  margin-top: 25px;
+}
+.technology_leftside {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.technology_arrow {
+  display: flex;
+  justify-content: end;
+}
+.technology_cardswrapper {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.technology_card {
+  height: 235px;
+  width: 215px;
+  transition: all 0.3s ease-in;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: baseline;
+}
+.technology_card:hover {
+  box-shadow: 5px 5px 6px 0px #bfbfbf;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in;
+}
+@media screen and (max-width: 480px) {
+  .technology_wrapper {
+    flex-direction: column;
+  }
+  .technology_img img {
+    width: 230px;
+    margin-top: 25px;
+  }
+  .technology_leftside {
+    gap: 4px;
+    align-items: center;
+  }
+  .technology_leftside h1 {
+    font-size: 24px;
+  }
+  .technology_leftside p {
+    font-size: 11px;
+  }
+  .technology_arrow {
+    height: 60px;
+  }
+  .technology_cardswrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .technology_cardswrapper h3 {
+    font-size: 20px;
+  }
+  .technology_cardswrapper p {
+    font-size: 12px;
+  }
+  .technology_card {
+    height: 190px;
+    width: 190px;
+  }
+  .technology_card:hover {
+    box-shadow: 5px 5px 6px 0px #bfbfbf;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .technology_wrapper {
+    flex-direction: column;
+    margin-top: 24px;
+    gap: 15px;
+  }
+  .technology_leftside {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .technology_cardswrapper {
+    display: flex;
+    gap: 30px;
+  }
+
+  .technology_wrapper {
+    margin-top: 25px;
+  }
+  .technology_img img {
+    width: 300px;
+    margin-top: 25px;
+  }
+  .technology_leftside {
+    gap: 4px;
+    align-items: center;
+  }
+  .technology_leftside h1 {
+    font-size: 24px;
+  }
+  .technology_leftside p {
+    font-size: 11px;
+  }
+  .technology_arrow {
+    height: 60px;
+  }
+  .technology_cardswrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .technology_cardswrapper h3 {
+    font-size: 20px;
+  }
+  .technology_cardswrapper p {
+    font-size: 12px;
+  }
+  .technology_card {
+    height: 190px;
+    width: 190px;
+  }
+  .technology_card:hover {
+    box-shadow: 5px 5px 6px 0px #bfbfbf;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in;
+  }
+}
