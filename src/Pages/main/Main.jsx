@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import Css from "./Main.module.css"
+=======
+import React from "react";
+import Css from "./Main.module.css";
+>>>>>>> 422797f89e7a52a1f22063d5d406ae0e4840f8c7
 import { useEffect } from "react";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import { FaRegStar, FaRupeeSign, FaStar } from "react-icons/fa";
+<<<<<<< HEAD
 import vendor from '../../Assets/Vector 20.svg'
 import PgService from '../Courses';
 import Feedback from '../../Component/feedback/Feedback';
@@ -12,6 +18,13 @@ import Detail from '../../Component/detail/Detail';
 import ReactStars from "react-rating-stars-component";
 
 
+=======
+import vendor from "../../Assets/Vector 20.svg";
+import web from "../../Assets/DigiB.png";
+import PgService from "../Courses";
+import Technology from "../technology/Technology";
+import Footer from "../../Component/footer/Footer";
+>>>>>>> 422797f89e7a52a1f22063d5d406ae0e4840f8c7
 function Main() {
   const [open, setOpen] = useState(false)
   function courseDetails(e) {
@@ -21,6 +34,7 @@ function Main() {
 
 
   useEffect(() => {
+<<<<<<< HEAD
     AOS.init({
 
     });
@@ -64,27 +78,59 @@ function Main() {
     description: 'Back-end development means working on server-side software, which focuses on everything you cant see on a website'
   },
 ]
+=======
+    AOS.init({});
+  }, []);
+>>>>>>> 422797f89e7a52a1f22063d5d406ae0e4840f8c7
   return (
     <>
       <div className={Css.slider}>
         <div className={Css.slider_container}>
           <div className={Css.slider_animation}>
-            <p data-aos="fade-left" data-aos-duration="1000"> <RiVerifiedBadgeFill color='#F17216' /> <span>Best Platform  for  leaning</span> </p>
-            <h1 data-aos="fade-right" className={Css.h1} data-aos-duration="1000">Reach Your  learning <br />
-              Goals in</h1>
+            <p data-aos="fade-left" data-aos-duration="1000">
+              {" "}
+              <RiVerifiedBadgeFill color="#F17216" />{" "}
+              <span>Best Platform for leaning</span>{" "}
+            </p>
+            <h1
+              data-aos="fade-right"
+              className={Css.h1}
+              data-aos-duration="1000"
+            >
+              Reach Your learning <br />
+              Goals in
+            </h1>
             <img className={Css.vendor} src={vendor} alt="" />
+<<<<<<< HEAD
             <p data-aos="zoom-in" data-aos-duration="1000" className={Css.p}>"Support small business and join the nationwide movement to encourage commercial support for the millions of minority owned businesses helping world economy."</p>
 
             <button data-aos="fade-up" data-aos-duration="1200">Enroll Now <span>▶</span></button>
           </div>
           <div className={Css.slider_img} data-aos="zoom-in" >
+=======
+            <p
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              style={{ fontSize: "20px" }}
+            >
+              "Support small business and join the nationwide movement to
+              encourage commercial support for the millions of minority owned
+              businesses helping world economy."
+            </p>
+
+            <button data-aos="fade-up" data-aos-duration="1200">
+              Get Started <span>▶</span>
+            </button>
+>>>>>>> 422797f89e7a52a1f22063d5d406ae0e4840f8c7
           </div>
+          <div className={Css.slider_img} data-aos="zoom-in"></div>
         </div>
       </div>
 
       <div className={Css.section} >
         <h2 id='course-sec' data-aos="fade-down" data-aos-duration="1000">Our Courses Features</h2>
         <div className={Css.courses}>
+<<<<<<< HEAD
 
         {
           courses.map((e)=>(
@@ -120,9 +166,166 @@ function Main() {
       <Feedback />
 
 
-    </>
+=======
+          <div className={Css.course}>
+            <div className={Css.logos}>
+              <img src={web} alt="front-end" />
+            </div>
+            <div className={Css.details}>
+              <h5>
+                <span className={Css.star}>
+                  <FaStar />
+                </span>
+                <span className={Css.star}>
+                  <FaStar />
+                </span>
+                <span className={Css.star}>
+                  <FaStar />
+                </span>
+                <span className={Css.star}>
+                  <FaStar />
+                </span>
+                <span className={Css.star}>
+                  <FaRegStar />
+                </span>
+                <span className={Css.star1}>4.0 Rating</span>
+              </h5>
+              <h5>Mobile App Development</h5>
+              <h5>
+                Price{" "}
+                <span>
+                  <FaRupeeSign size={"11px"} />
+                </span>
+                32000
+              </h5>
+              <h5>Duration 4 Months</h5>
+              <div className={Css.enroll}>
+                <button>Enroll Now</button>
+              </div>
+            </div>
+          </div>
 
-  )
+          <div className={Css.course}>
+            <div className={Css.logos}>
+              <img src={web} alt="front-end" />
+            </div>
+            <div className={Css.details}>
+              <h5>
+                <span className={Css.star}>
+                  <FaStar />
+                </span>
+                <span className={Css.star}>
+                  <FaStar />
+                </span>
+                <span className={Css.star}>
+                  <FaStar />
+                </span>
+                <span className={Css.star}>
+                  <FaStar />
+                </span>
+                <span className={Css.star}>
+                  <FaRegStar />
+                </span>
+                <span className={Css.star1}>4.0 Rating</span>
+              </h5>
+              <h5>Mobile App Development</h5>
+              <h5>
+                Price{" "}
+                <span>
+                  <FaRupeeSign size={"11px"} />
+                </span>
+                32000
+              </h5>
+              <h5>Duration 4 Months</h5>
+              <div className={Css.enroll}>
+                <button>Enroll Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div className={Css.course}>
+            <div className={Css.logos}>
+              <img src={web} alt="front-end" />
+            </div>
+            <div className={Css.details}>
+              <h5>
+                <span className={Css.star}>
+                  <FaStar />
+                </span>
+                <span className={Css.star}>
+                  <FaStar />
+                </span>
+                <span className={Css.star}>
+                  <FaStar />
+                </span>
+                <span className={Css.star}>
+                  <FaStar />
+                </span>
+                <span className={Css.star}>
+                  <FaRegStar />
+                </span>
+                <span className={Css.star1}>4.0 Rating</span>
+              </h5>
+              <h5>Mobile App Development</h5>
+              <h5>
+                Price{" "}
+                <span>
+                  <FaRupeeSign size={"11px"} />
+                </span>
+                32000
+              </h5>
+              <h5>Duration 4 Months</h5>
+              <div className={Css.enroll}>
+                <button>Enroll Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div className={Css.course}>
+            <div className={Css.logos}>
+              <img src={web} alt="front-end" />
+            </div>
+            <div className={Css.details}>
+              <h5>
+                <span className={Css.star}>
+                  <FaStar />
+                </span>
+                <span className={Css.star}>
+                  <FaStar />
+                </span>
+                <span className={Css.star}>
+                  <FaStar />
+                </span>
+                <span className={Css.star}>
+                  <FaStar />
+                </span>
+                <span className={Css.star}>
+                  <FaRegStar />
+                </span>
+                <span className={Css.star1}>4.0 Rating</span>
+              </h5>
+              <h5>Mobile App Development</h5>
+              <h5>
+                Price{" "}
+                <span>
+                  <FaRupeeSign size={"11px"} />
+                </span>
+                32000
+              </h5>
+              <h5>Duration 4 Months</h5>
+              <div className={Css.enroll}>
+                <button>Enroll Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <PgService />
+      <Technology />
+      <Footer />
+>>>>>>> 422797f89e7a52a1f22063d5d406ae0e4840f8c7
+    </>
+  );
 }
 
 export default Main;
