@@ -39,7 +39,6 @@
   align-items: center;
   gap: 5px;
 }
-<<<<<<< HEAD
 .slider_animation .p{
   font-size: 1.2em;
   font-family: Ubuntu;
@@ -47,10 +46,9 @@ font-weight: 400;
 }
 .slider_animation p span{
     color:  #F17216;
-=======
+}
 .slider_animation p span {
   color: #f17216;
->>>>>>> 422797f89e7a52a1f22063d5d406ae0e4840f8c7
   font-family: Ubuntu;
 }
 .slider_animation h1 {
@@ -149,7 +147,6 @@ font-weight: 400;
 
 
 
-<<<<<<< HEAD
    .section{
     height: auto;
    }
@@ -204,7 +201,8 @@ font-weight: 400;
    }
 .details button{
     border: 1px solid white;
-=======
+}
+
 .section {
   height: auto;
 }
@@ -254,7 +252,6 @@ font-weight: 400;
 }
 .details button {
   border: 1px solid white;
->>>>>>> 422797f89e7a52a1f22063d5d406ae0e4840f8c7
   padding: 5px;
   height: 30px;
   width: 108px;
@@ -262,15 +259,14 @@ font-weight: 400;
   font-weight: 300;
   background: linear-gradient(45deg, #fdb700, #ffa000);
   color: rgb(240, 240, 240);
-<<<<<<< HEAD
+
   box-shadow: 3px 3px 11px 0px #dad5c8;;
-=======
   box-shadow: 0px 6px 11px 0px #dad5c8;
->>>>>>> 422797f89e7a52a1f22063d5d406ae0e4840f8c7
+
   border-radius: 130px;
   font-family: Ubuntu;
 }
-<<<<<<< HEAD
+
 .section h2{
   text-align: center;
   font-family: Ubuntu;
@@ -343,7 +339,7 @@ font-size: 14px;
 }
 
 
-@media (min-width: 459px) and (max-width: 768px){
+@media (min-width: 459px) and (max-width: 768px) {
   .slider_img{
     display: none;
    }
@@ -364,7 +360,7 @@ font-size: 14px;
     width: 40%;
     
    }
-=======
+  }
 
 @media screen and (max-width: 460px) {
   .slider {
@@ -380,5 +376,4 @@ font-size: 14px;
   .slider_img {
     display: none;
   }
->>>>>>> 422797f89e7a52a1f22063d5d406ae0e4840f8c7
 }
