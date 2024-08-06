@@ -1,14 +1,25 @@
 .footer_mainWrapper {
   display: flex;
   justify-content: space-evenly;
-
+  height: 650px;
   align-items: center;
+}
+.footer_img{
+  height: 450px;
+  /* background: #000; */
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.footer_img img{
+  width: 80%;
 }
 
 .footer_form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 50%;
 }
 .footer_form p {
   font-size: 11.26px;
@@ -44,7 +55,8 @@ form button {
   height: 47.84px;
   width: 147.74px;
   border-radius: 135.07px;
-  background: linear-gradient(97.32deg, #ff698d -3.47%, #fb3f6c 108.43%);
+  background: linear-gradient(45deg, #fdb700, #ffa000);
+  /* background: linear-gradient(97.32deg, #ff698d -3.47%, #fb3f6c 108.43%); */
   color: white;
   border: 1px solid white;
   box-shadow: 5px 5px 6px 0px #bfbfbf;
@@ -60,6 +72,11 @@ form button {
   align-items: center;
   margin-top: 25px;
 }
+.copy_img img{
+  width: 156px;
+  background-color: white;
+  border-radius: 15px;
+}
 .text_copy {
   display: flex;
   color: white;
@@ -70,16 +87,22 @@ form button {
   gap: 15px;
   cursor: pointer;
 }
-
+.contain h2{
+color: #282c4b;
+}
 @media screen and (max-width: 480px) {
   .footer_mainWrapper {
-    height: auto;
+    height: 650px;
     align-items: center;
     flex-direction: column;
   }
   .footer_img {
     position: relative;
     display: none;
+  }
+  .copy_img img{
+    width: 166px;
+    background-color: white;
   }
   .footer_form {
     margin-top: 20px;
@@ -101,6 +124,7 @@ form button {
   }
   .copyright_section {
     display: grid;
+    padding: 10px;
     grid-template-columns: auto;
     height: auto;
     justify-content: center;

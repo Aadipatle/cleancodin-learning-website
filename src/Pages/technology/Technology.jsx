@@ -5,16 +5,20 @@ import Timg2 from "../../Assets/Vector.svg";
 import Timg3 from "../../Assets/shop.svg";
 import Timg4 from "../../Assets/cards.svg";
 import Timg5 from "../../Assets/favorite-chart.png";
+
 function Technology() {
   
   return (
     <>
-      <div className="technology_wrapper">
+    <h2 id="tech-sec">About</h2>
+      <div className="technology_wrapper" >
+     
         <div className="technology_leftside">
-          <div className="technology_img">
+          <div className="technology_img" >
             <img src={Timg1} alt="" />
           </div>
           <div className="technology_heading">
+          <p>Services</p>
             <h1>Our Capabilities</h1>
           </div>
           <div className="technology_lorem">
@@ -36,28 +40,25 @@ function Technology() {
             </div>
             <h3>Mobile App</h3>
             <p>
-              Leverage agile framework <br /> to provide a robust high <br />{" "}
-              level synopsys overviews
+            Bring your imagination to the reality in the form of Mobile application We have a great experience in delivering high  quality mobile apps
             </p>
           </div>
           <div className="technology_card">
             <div className="card_img" style={{ marginLeft: "15px" }}>
               <img src={Timg4} alt="" />
             </div>
-            <h3>website </h3>
+            <h3>Website </h3>
             <p>
-              Bring to the table survival <br /> strategies to ensure <br />{" "}
-              proactive domination
+            In the web devlopment we provide an intuitive design to the User based on the  user - interaction.
             </p>
           </div>
           <div className="technology_card">
             <div className="card_img" style={{ marginLeft: "15px" }}>
               <img src={Timg5} alt="" />
             </div>
-            <h3>website </h3>
+            <h3>Digital Marketing </h3>
             <p>
-              Grow the holistic world <br /> view of disruptive <br />{" "}
-              innovation workspace
+            SEO plays an important role  in growing your business digitally & that comes that comes under the Digital Marketing
             </p>
           </div>
         </div>

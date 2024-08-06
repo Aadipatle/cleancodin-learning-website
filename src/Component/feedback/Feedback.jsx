@@ -11,9 +11,9 @@ import 'aos/dist/aos.css';
 function Feedback() {
     useEffect(() => {
         AOS.init({
-    
+
         });
-      }, [])
+    }, [])
     return (
         <>
             <div className={Css.feedback}>
@@ -43,7 +43,7 @@ function Feedback() {
 
                         modules={[EffectCoverflow, Autoplay]}
                         className='swip_wrap'
-                    >
+                    > 
                         <SwiperSlide className={Css.feedback_slide} >
                             <div className={Css.customer} data-aos="zoom-in" data-aos-duration="1200">
                                 <p><span className={Css.tic}><FaQuoteLeft /></span>I really like the team for example, a relationship-focused performance expectation might be that the employee sustain collegial working relationships with her peers, subordinates and customers.</p>
@@ -62,7 +62,6 @@ function Feedback() {
                                 <h5>Tushar</h5>
                             </div>
                         </SwiperSlide>
-
                     </Swiper>
                 </div>
             </div>

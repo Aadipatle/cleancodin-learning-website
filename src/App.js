@@ -9,8 +9,8 @@ import Technology from "./Pages/technology/Technology.jsx";
 function App() {
   return (
     <BrowserRouter>
-      <ScrollToTop />
       <Header />
+      <ScrollToTop />
       <Routes>
         <Route element={<Main />} path="/" />
         <Route element={<PgService />} path="/service" />
